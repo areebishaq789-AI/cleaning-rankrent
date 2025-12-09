@@ -12,7 +12,7 @@ const services = [
     {
         title: "Residential Cleaning",
         description: "Regular cleaning for your home. Weekly, bi-weekly, or monthly schedules available.",
-        imageSrc: "/hero-clean.png",
+        imageSrc: "/service-residential-kitchen.jpg",
         features: [
             "Dusting and vacuuming",
             "Kitchen and bathroom sanitization",

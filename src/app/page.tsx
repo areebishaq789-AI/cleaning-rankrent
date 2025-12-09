@@ -12,7 +12,7 @@ export default function Home() {
       description: "Keep your home spotless with our regular or one-time cleaning services.",
       icon: <HomeIcon className="h-6 w-6" />,
       href: "/services",
-      imageSrc: "/hero-clean.png",
+      imageSrc: "/service-residential-kitchen.jpg",
     },
     {
       title: "Commercial Cleaning",
@@ -40,39 +40,32 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative isolate pt-14">
-        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0ea5e9] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{ clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" }}></div>
-        </div>
+      {/* Hero Section */}
+      <div className="relative isolate overflow-hidden pt-14">
+        <Image
+          src="/main-hero-bright.jpg"
+          alt="Bright and clean modern living room"
+          fill
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          priority
+        />
+        <div className="absolute inset-0 -z-10 bg-gray-900/70" /> {/* Overlay for readability */}
 
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <h1 className="max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <div className="mx-auto max-w-7xl px-6 py-32 sm:py-48 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Best Cleaning Services in Ajax, Ontario
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-300">
               Experience a cleaner home and a clearer mind. We provide top-rated, reliable residential and commercial cleaning services across Ajax and Durham Region.
             </p>
-            <div className="mt-10 flex items-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="/contact" className="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">
                 Get a Free Quote
               </Link>
-              <Link href="/services" className="text-sm font-semibold leading-6 text-gray-900">
+              <Link href="/services" className="text-sm font-semibold leading-6 text-white">
                 View Services <span aria-hidden="true">→</span>
               </Link>
-            </div>
-          </div>
-          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-            <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/10">
-                <Image
-                  src="/main-hero-team.png"
-                  alt="Sparkling clean modern living room"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
             </div>
           </div>
         </div>
