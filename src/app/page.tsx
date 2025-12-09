@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import FAQ from "@/components/FAQ";
+import Testimonials from "@/components/Testimonials";
 import { CheckCircle, Home as HomeIcon, Building2, Truck, Sparkles } from "lucide-react";
 
 export default function Home() {
@@ -163,6 +164,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* FAQ Section */}
       <FAQ />
