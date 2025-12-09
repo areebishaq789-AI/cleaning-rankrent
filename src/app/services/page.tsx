@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ const services = [
     {
         title: "Residential Cleaning",
         description: "Regular cleaning for your home. Weekly, bi-weekly, or monthly schedules available.",
+        imageSrc: "/hero-clean.png",
         features: [
             "Dusting and vacuuming",
             "Kitchen and bathroom sanitization",
@@ -21,6 +23,7 @@ const services = [
     {
         title: "Commercial Cleaning",
         description: "Keep your office or retail space professional and welcoming.",
+        imageSrc: "/service-commercial-real.jpg",
         features: [
             "Desk and workspace cleaning",
             "Trash removal",
@@ -31,6 +34,7 @@ const services = [
     {
         title: "Deep Cleaning",
         description: "A thorough top-to-bottom clean for spring cleaning or special occasions.",
+        imageSrc: "/service-deep-clean.png",
         features: [
             "Baseboards and vents",
             "Inside appliances (fridge/oven)",
@@ -41,6 +45,7 @@ const services = [
     {
         title: "Move-in / Move-out",
         description: "Get your security deposit back or prepare your new home for arrival.",
+        imageSrc: "/service-move-in-boxes.jpg",
         features: [
             "Complete empty home cleaning",
             "Cabinet and drawer cleaning",
@@ -66,17 +71,27 @@ export default function ServicesPage() {
                 <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 w-full p-8 sm:p-10">
                         {services.map((service) => (
-                            <div key={service.title} className="rounded-2xl bg-gray-50 p-6 shadow-sm ring-1 ring-gray-900/5">
-                                <h3 className="text-xl font-semibold leading-7 text-gray-900">{service.title}</h3>
-                                <p className="mt-2 text-base leading-7 text-gray-600">{service.description}</p>
-                                <ul role="list" className="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-                                    {service.features.map((feature) => (
-                                        <li key={feature} className="flex gap-x-3">
-                                            <Check className="h-6 w-5 flex-none text-sky-600" aria-hidden="true" />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
+                            <div key={service.title} className="rounded-2xl bg-gray-50 shadow-sm ring-1 ring-gray-900/5 overflow-hidden">
+                                <div className="relative aspect-[16/9] w-full">
+                                    <Image
+                                        src={service.imageSrc}
+                                        alt={service.title}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-semibold leading-7 text-gray-900">{service.title}</h3>
+                                    <p className="mt-2 text-base leading-7 text-gray-600">{service.description}</p>
+                                    <ul role="list" className="mt-6 space-y-3 text-sm leading-6 text-gray-600">
+                                        {service.features.map((feature) => (
+                                            <li key={feature} className="flex gap-x-3">
+                                                <Check className="h-6 w-5 flex-none text-sky-600" aria-hidden="true" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         ))}
                     </div>
