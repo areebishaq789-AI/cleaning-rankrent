@@ -25,29 +25,47 @@ export default function Footer() {
                                 <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li>
-                                        <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                        <Link href="/services/residential-cleaning" className="text-sm leading-6 text-gray-300 hover:text-white">
                                             Residential Cleaning
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                        <Link href="/services/commercial-cleaning" className="text-sm leading-6 text-gray-300 hover:text-white">
                                             Commercial Cleaning
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                        <Link href="/services/move-in-move-out" className="text-sm leading-6 text-gray-300 hover:text-white">
                                             Move-in/Move-out
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/services" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                        <Link href="/services/deep-cleaning" className="text-sm leading-6 text-gray-300 hover:text-white">
                                             Deep Cleaning
                                         </Link>
                                     </li>
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
-                                <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+                                <h3 className="text-sm font-semibold leading-6 text-white">Service Areas</h3>
+                                <ul role="list" className="mt-6 space-y-4">
+                                    <li>
+                                        <Link href="/locations/whitby" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                            Whitby
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/locations/pickering" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                            Pickering
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/" className="text-sm leading-6 text-gray-300 hover:text-white">
+                                            Ajax (HQ)
+                                        </Link>
+                                    </li>
+                                </ul>
+                                <h3 className="text-sm font-semibold leading-6 text-white mt-10">Company</h3>
                                 <ul role="list" className="mt-6 space-y-4">
                                     <li>
                                         <Link href="/about" className="text-sm leading-6 text-gray-300 hover:text-white">
@@ -57,11 +75,6 @@ export default function Footer() {
                                     <li>
                                         <Link href="/contact" className="text-sm leading-6 text-gray-300 hover:text-white">
                                             Contact
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/privacy" className="text-sm leading-6 text-gray-300 hover:text-white">
-                                            Privacy Policy
                                         </Link>
                                     </li>
                                 </ul>

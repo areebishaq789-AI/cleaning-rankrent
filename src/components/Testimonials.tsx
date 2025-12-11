@@ -4,21 +4,21 @@ import { Star } from "lucide-react";
 
 const testimonials = [
     {
-        content: "Honestly, I was surprised. They successfully removed a carpet stain I thought was permanent. Super friendly team too.",
-        author: "Sarah J.",
-        location: "Ajax",
+        content: "I’ve hired several cleaning companies in Ajax over the years, but this team is by far the best. They didn't just do a surface clean; they really got into the corners and details. My kitchen and bathrooms have never looked this sparkling. I highly recommend them for anyone looking for reliable residential cleaning.",
+        author: "Sarah Jenkins",
+        location: "Ajax, Ontario",
         rating: 5,
     },
     {
-        content: "Used them for my move-out cleaning. Landlord gave the full deposit back with no issues. Saved me a ton of stress during the move.",
-        author: "Mike T.",
-        location: "South Ajax",
+        content: "Our office in Whitby needed a serious deep clean before we reopened. The crew was professional, punctual, and extremely thorough. They worked around our schedule to minimize disruption. It's great to walk into a fresh, clean workspace every morning now. 5 stars!",
+        author: "Michael Thompson",
+        location: "Whitby, Ontario",
         rating: 5,
     },
     {
-        content: "My regular cleaner cancelled so I called these guys last minute. They showed up on time and did a great job. Will definitely book again.",
-        author: "Priya K.",
-        location: "Pickering",
+        content: "Moving out is stressful enough without worrying about the cleaning deposit. I hired them for a move-out clean in Pickering, and they did a phenomenal job. The landlord was impressed, and I got my full deposit back. Worth every penny for the peace of mind.",
+        author: "Priya Kumar",
+        location: "Pickering, Ontario",
         rating: 5,
     },
 ];

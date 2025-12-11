@@ -31,8 +31,18 @@ const faqs = [
     },
 ];
 
-export default function FAQ() {
+interface FAQItem {
+    question: string;
+    answer: string;
+}
+
+interface FAQProps {
+    items?: FAQItem[];
+}
+
+export default function FAQ({ items }: FAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const displayFaqs = items || faqs;
 
     return (
         <div className="bg-white py-24 sm:py-32">
@@ -47,7 +57,7 @@ export default function FAQ() {
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl divide-y divide-gray-900/10">
                     <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
-                        {faqs.map((faq, index) => (
+                        {displayFaqs.map((faq, index) => (
                             <div key={faq.question} className="pt-6">
                                 <dt>
                                     <button
