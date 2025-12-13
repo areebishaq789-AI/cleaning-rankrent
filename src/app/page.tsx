@@ -133,7 +133,7 @@ export default function Home() {
                   </li>
                   <li className="flex gap-x-3">
                     <CheckCircle className="h-5 w-5 flex-none text-sky-600" aria-hidden="true" />
-                    Post-Renovation Cleanup
+                    Deep Cleaning
                   </li>
                 </ul>
               </div>

@@ -13,6 +13,7 @@ const services = [
         title: "Residential Cleaning",
         description: "Regular cleaning for your home. Weekly, bi-weekly, or monthly schedules available.",
         imageSrc: "/service-residential-kitchen.jpg",
+        href: "/services/residential-cleaning",
         features: [
             "Dusting and vacuuming",
             "Kitchen and bathroom sanitization",
@@ -24,6 +25,7 @@ const services = [
         title: "Commercial Cleaning",
         description: "Keep your office or retail space professional and welcoming.",
         imageSrc: "/service-commercial-real.jpg",
+        href: "/services/commercial-cleaning",
         features: [
             "Desk and workspace cleaning",
             "Trash removal",
@@ -35,6 +37,7 @@ const services = [
         title: "Deep Cleaning",
         description: "A thorough top-to-bottom clean for spring cleaning or special occasions.",
         imageSrc: "/service-deep-clean.png",
+        href: "/services/deep-cleaning",
         features: [
             "Baseboards and vents",
             "Inside appliances (fridge/oven)",
@@ -46,6 +49,7 @@ const services = [
         title: "Move-in / Move-out",
         description: "Get your security deposit back or prepare your new home for arrival.",
         imageSrc: "/service-move-in-boxes.jpg",
+        href: "/services/move-in-move-out",
         features: [
             "Complete empty home cleaning",
             "Cabinet and drawer cleaning",
@@ -71,7 +75,7 @@ export default function ServicesPage() {
                 <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 w-full p-8 sm:p-10">
                         {services.map((service) => (
-                            <div key={service.title} className="rounded-2xl bg-gray-50 shadow-sm ring-1 ring-gray-900/5 overflow-hidden">
+                            <Link key={service.title} href={service.href} className="rounded-2xl bg-gray-50 shadow-sm ring-1 ring-gray-900/5 overflow-hidden hover:shadow-lg transition-shadow block">
                                 <div className="relative aspect-[16/9] w-full">
                                     <Image
                                         src={service.imageSrc}
@@ -92,7 +96,7 @@ export default function ServicesPage() {
                                         ))}
                                     </ul>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
